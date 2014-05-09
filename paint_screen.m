@@ -5,6 +5,11 @@ function paint_screen(window,state)
 
 border_rect = 15 * [-1 -1 1 1];
 
+% draw instructions
+voffset = 50;
+DrawFormattedText(window, ['This trial: ' state.trial_text], 'center', ...
+    voffset, [255 255 255]);
+
 % draw numbers
 for ind = 1:state.num_options
     DrawFormattedText(window, num2str(ind), state.xcoords(ind), ...

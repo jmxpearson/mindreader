@@ -4,3 +4,4 @@
 
 % get trial type
 state.trial_type = trial_type(trialnum); 
+state.trial_text = type_text(trial_type(trialnum));
