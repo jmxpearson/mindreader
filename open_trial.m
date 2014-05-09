@@ -6,11 +6,7 @@ result = '';
 trialnum = trialnum+1;
 pts = 0; %points on this trial
 
-% set up geometry
-% save in state struct
-
-% get trial type
-state.trial_type = trial_type(trialnum); %which target
+setup_state
 
 % prepare to run trial
 keep_waiting = 1;
@@ -19,4 +15,4 @@ data(trialnum).trial_start_time = trial_start_time;
 mark_event('trial_start',plx,1,ni);
 
 %paint screen
-%paint_screen(win_ptr,state,0)
+%paint_screen(win_ptr,state)
