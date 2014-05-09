@@ -18,7 +18,7 @@ num_options = 10;  % number of potential choices
 num_types = 4;  % number of trial types
 type_text = {'Watch', 'Think', 'Plan', 'Move'};  % instruction text for each trial type
 block_counts = [4 4 4 4];  % counts of each trial type in each block
-trial_type = block_randomize(numtrials, block_counts);  % list of type of each trial
+trial_type = block_randomize(block_counts, numtrials);  % list of type of each trial
 
 %%%%%%%%%%%%%%%% timing parameters %%%%%%%%%%%%%%%%%%%%%%%%%%
 iti = 1;  % inter-trial interval
