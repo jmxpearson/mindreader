@@ -8,14 +8,14 @@ HideCursor; % turn off mouse cursor
 ListenChar(2); %keeps keyboard input from going to Matlab window
 
 %which screen do we display to?
-which_screen=1;
+which_screen=0;
 
 %open window
 [win_ptr, screenRect] = Screen('OpenWindow',which_screen,[0 0 0],[],32);
 
 %set font parameters
 Screen(win_ptr,'TextFont','Helvetica');
-Screen(win_ptr,'TextSize',36);
+Screen(win_ptr,'TextSize',72);
 
 WaitSecs(1); %for some reason, PTB screws up Screen redraw 
 %the first time we use pause, so do it here
