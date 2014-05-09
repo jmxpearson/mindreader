@@ -20,7 +20,7 @@ setup_pars
 setup_geometry
 
 %bind keys
-bind_keys
+setup_keys
 
 %set up data file
 setup_data_file
