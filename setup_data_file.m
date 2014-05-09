@@ -12,16 +12,16 @@ end
 %this!
 
 if ispc
-    if ~isdir('c:\data\gonogo')
-        mkdir('c:\data\gonogo')
+    if ~isdir('c:\data\mindreader')
+        mkdir('c:\data\mindreader')
     end
-    cd C:\data\gonogo
+    cd C:\data\mindreader
     dat_dir=sprintf('%s\\%s',pwd,filename);
 elseif ismac
-    if ~isdir('/data/gonogo')
-        mkdir('/data/gonogo')
+    if ~isdir('/data/mindreader')
+        mkdir('/data/mindreader')
     end
-    cd /data/gonogo
+    cd /data/mindreader
     dat_dir=sprintf('%s/%s',pwd,filename);
 end
 
@@ -52,4 +52,4 @@ else
 end
 
 fname_short=sprintf('%s.%d',filename,lastrun+1);
-fname=sprintf('%s.gonogo.mat',fname_short);
+fname=sprintf('%s.mindreader.mat',fname_short);
