@@ -21,7 +21,7 @@ number_box_height = 20;
 number_box = [-number_box_width/2 -number_box_height/2 number_box_width...
     number_box_height];  % box surrounding a given number
 number_box_min_spacing = 20;
-boxes_per_row = floor(reduced_bounds(1) / (number_box_width + number_box_spacing));
+boxes_per_row = floor(reduced_bounds(1) / (number_box_width + number_box_min_spacing));
 
 if num_options <= boxes_per_row  % we can fit all numbers on same row
     %calculate locations of box centers

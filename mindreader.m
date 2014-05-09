@@ -13,15 +13,22 @@ while continue_running
     open_trial %set up trial variables
     
     while keep_waiting
-        handle_animation %code related to drawing screen
         
-        check_rt %check to see if we've exceeded allotted response time
+        while ~selection_made
+            cycle_options %sequentially offer options
         
-        get_input %get input from keyboard, joystick, etc.
+            get_input %get input from keyboard, joystick, etc.
+            
+            handle_input %handle selection and prepare to move on
+        end
         
-        handle_input %go figure out whether something interesting happened
+        %handle_animation %code related to drawing screen
         
-        run_outcome %take care of screen animation, outcome, and saving results
+        %check_rt %check to see if we've exceeded allotted response time
+        
+        %handle_input %go figure out whether something interesting happened
+        
+        %run_outcome %take care of screen animation, outcome, and saving results
         
         esc_check %did we try to exit?
     end
