@@ -2,6 +2,11 @@
 global data state;
 data = [];
 
+% add subdirectories to path
+toppath = fileparts(which('mindreader'));
+addpath([toppath filesep 'setup']);
+addpath([toppath filesep 'helpers']);
+
 %parse inputs
 parse_inits
 
