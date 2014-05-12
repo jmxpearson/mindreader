@@ -14,17 +14,13 @@ while continue_running
     
     while keep_waiting
         
-        while ~selection_made
-            cycle_options %sequentially offer options
+        cycle_options %sequentially offer options
         
-            get_input %get input from keyboard, joystick, etc.
-            
-            handle_input %handle selection and prepare to move on
-        end
+        get_input %get input from keyboard, joystick, etc.
         
-        %handle_animation %code related to drawing screen
+        parse_input %map input devices to actions
         
-        %check_rt %check to see if we've exceeded allotted response time
+        respond_to_input %take care of trial logic in response
         
         %handle_input %go figure out whether something interesting happened
         
