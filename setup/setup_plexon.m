@@ -33,7 +33,8 @@ if ~isempty(which('mexPlexDO'))  %test to make sure plexon is here at all
         tester = PL_DOClearAllBits(ni);
     end
 else
-    % if there's no Plexon SDK installed
+    disp('No Plexon or NI-DAQ found. Event pulses will not be sent');
+    %baseline case: no Plexon, no NI-DAQ
     plx = 0;
     ni = [];
 end

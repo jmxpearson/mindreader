@@ -18,7 +18,7 @@ setup_joystick
 
 %setup plexon
 setup_plexon
-    
+
 %PTB settings (it tends to complain on PCs)
 setup_ptb
 
