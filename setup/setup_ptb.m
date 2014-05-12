@@ -8,7 +8,7 @@ HideCursor; % turn off mouse cursor
 ListenChar(2); %keeps keyboard input from going to Matlab window
 
 %which screen do we display to?
-which_screen=0;
+which_screen=2;
 
 %open window
 [win_ptr, screenRect] = Screen('OpenWindow',which_screen,[0 0 0],[],32);
