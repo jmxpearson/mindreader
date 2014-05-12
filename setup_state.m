@@ -4,7 +4,7 @@
 
 % get trial type
 state.trial_type = trial_type(trialnum); 
-state.trial_text = 'Select';
+state.trial_text = type_text{state.trial_type};
 
 % order in which we highlight items
 state.option_order = Shuffle(1:num_options);
