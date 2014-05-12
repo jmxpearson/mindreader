@@ -11,4 +11,5 @@ state.option_order = Shuffle(1:num_options);
 
 % set no option highlighted
 state.highlight = 0;  % number of option highlighted
-state.index = 0;  % place in sequence of options (which may be shuffled)
+state.target = randi(num_options);  % random option will serve as target
+state.index = 0;  % place in sequence of option_order

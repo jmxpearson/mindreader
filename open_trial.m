@@ -4,7 +4,6 @@
 %basic bookkeeping, increment trial number
 result = '';
 trialnum = trialnum+1;
-pts = 0; %points on this trial
 
 setup_state
 
