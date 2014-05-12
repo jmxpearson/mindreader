@@ -14,7 +14,7 @@ if exist('invars','var')
 end
 
 %%%%%%%%%%%%%%%% task parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-num_options = 10;  % number of potential choices
+num_options = 5;  % number of potential choices
 num_types = 4;  % number of trial types
 type_text = {'Watch', 'Think', 'Plan', 'Move'};  % instruction text for each trial type
 block_counts = [4 4 4 4];  % counts of each trial type in each block
