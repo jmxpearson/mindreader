@@ -3,7 +3,7 @@ function mark_event(eventname, plx, channel, ni)
 % trial
 % in addition, sends a TTL pulse to Plexon (if present) on the given
 % channel
-% if Plexon not present, but the NI-DAQ is, send ONLY events on channel 1
+% if Plexon not present, but ni variable is nonempty, send events
 % as 5ms TTL pulses
 
 global state
@@ -15,15 +15,13 @@ end
 if ~exist('ni','var')
     ni=[];
 end
-disp(['ni = ' ni])
+
 if plx
     try
         PL_SendUserEvent(plx,channel);
     end
 elseif ni 
-    if channel == 1
-        PL_DOPulseBit(ni, 1, 5); %send a 5ms TTL pulse through the NIDAQ
-    end
+    PL_DOPulseBit(ni, 1, 5); %send a 5ms TTL pulse through the NIDAQ
 end
 
 eventtime=GetSecs-state.trial_start_time;
