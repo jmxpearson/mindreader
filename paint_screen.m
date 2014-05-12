@@ -8,7 +8,7 @@ target_rect = 10 * [-1 -1 1 1];
 
 % draw instructions
 voffset = 50;
-DrawFormattedText(window, ['This trial: ' state.trial_text], 'center', ...
+DrawFormattedText(window, ['This trial:\n' state.trial_text], 'center', ...
     voffset, [255 255 255]);
 
 % draw numbers

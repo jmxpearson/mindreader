@@ -16,7 +16,8 @@ end
 %%%%%%%%%%%%%%%% task parameters %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 num_options = 5;  % number of potential choices
 num_types = 4;  % number of trial types
-type_text = {'Watch', 'Think', 'Plan', 'Move'};  % instruction text for each trial type
+type_text = {'Just watch', 'Think "stop"', 'Pretend to select', ...
+    'Select the option'};  % instruction text for each trial type
 block_counts = [4 4 4 4];  % counts of each trial type in each block
 trial_type = block_randomize(block_counts, numtrials);  % list of type of each trial
 
