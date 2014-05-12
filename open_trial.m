@@ -2,7 +2,6 @@
 %perform basic bookkeeping before trial starts
 
 %basic bookkeeping, increment trial number
-result = '';
 trialnum = trialnum+1;
 
 setup_state
