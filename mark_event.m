@@ -20,8 +20,10 @@ if plx
     try
         PL_SendUserEvent(plx,channel);
     end
-elseif ni && (channel == 1)
-    PL_DOPulseBit(ni, 1, 5); %send a 5ms TTL pulse through the NIDAQ
+elseif ni 
+    if channel == 1
+        PL_DOPulseBit(ni, 1, 5); %send a 5ms TTL pulse through the NIDAQ
+    end
 end
 
 eventtime=GetSecs-state.trial_start_time;
