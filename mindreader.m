@@ -22,10 +22,6 @@ while continue_running
         
         respond_to_input %take care of trial logic in response
         
-        %handle_input %go figure out whether something interesting happened
-        
-        %run_outcome %take care of screen animation, outcome, and saving results
-        
         esc_check %did we try to exit?
     end
 

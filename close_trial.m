@@ -3,12 +3,9 @@
 
 display_results
 
-%restore screen
-
-
-curtime=GetSecs;
-
-%for now, no iti, since outcome period pauses action
-mark_event('trial_over',plx,8)
-
 save_data
+
+%blank screen and start inter-trial-interval
+blank_screen(win_ptr)
+mark_event('trial_over',plx,8)
+WaitSecs(iti);
