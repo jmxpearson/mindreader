@@ -2,8 +2,12 @@
 % save variables needed to specify trial parameters in the state structure
 % for future display
 
+% record start time
+state.trial_start_time = trial_start_time;
+
 % get trial type
-state.trial_type = trial_type(trialnum); 
+state.trialnum = trialnum;
+state.trial_type = trial_type(state.trialnum); 
 state.trial_text = type_text{state.trial_type};
 
 % order in which we highlight items
