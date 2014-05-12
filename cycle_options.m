@@ -8,6 +8,6 @@ if (state.index == 0) || (GetSecs - highlight_on > resp_time)
    end
    state.highlight = state.option_order(state.index);
    
-   mark_event('highlight', plx, 3);
+   mark_event('highlight', plx, 4);
    paint_screen(win_ptr, state);
 end

@@ -15,7 +15,7 @@ end
 if ~exist('ni','var')
     ni=[];
 end
-
+disp(['ni = ' ni])
 if plx
     try
         PL_SendUserEvent(plx,channel);

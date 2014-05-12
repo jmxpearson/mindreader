@@ -5,7 +5,7 @@ if has_input
     switch this_key
         case {Lkey, Rkey, Jtrig}
             state.pushed=1;
-            mark_event('input', plx, 4);
+            mark_event('input', plx, 5);
         case stopkey
             state.pushed=-1;
         otherwise
@@ -17,6 +17,7 @@ if has_input
         case 1
             if state.readywait  % if we've been waiting to begin
                 state.readywait = 0;
+                mark_event('ready', plx, 3);
             else  % if we're in task proper
                 state.selection = state.highlight;
             end
