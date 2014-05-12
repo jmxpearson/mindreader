@@ -21,6 +21,8 @@ while continue_running
             esc_check
         end
         
+        WaitSecs(0.5); %just to clear out extra input
+        
         cycle_options %sequentially offer options
         
         get_input %get input from keyboard, joystick, etc.
