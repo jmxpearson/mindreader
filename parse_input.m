@@ -5,7 +5,7 @@ if has_input
     switch this_key
         case {Lkey, Rkey, Jtrig}
             state.pushed=1;
-            mark_event('selected',plx,3);
+            mark_event('input',plx,3);
         case stopkey
             state.pushed=-1;
         otherwise

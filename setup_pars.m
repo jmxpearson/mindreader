@@ -23,6 +23,7 @@ trial_type = block_randomize(block_counts, numtrials);  % list of type of each t
 %%%%%%%%%%%%%%%% timing parameters %%%%%%%%%%%%%%%%%%%%%%%%%%
 iti = 1;  % inter-trial interval
 resp_time = 1.5;  % time allowed for responses while numbers highlighted
+max_highlights = 2 * num_options;  % number of options to highlight before moving on
 
 %%%%%%%%%%% bundle things that don't change into pars for saving %%%%%%%%%%
 pars.num_options = num_options;
@@ -32,3 +33,4 @@ pars.block_counts = block_counts;
 pars.trial_type = trial_type;
 pars.iti = iti;
 pars.resp_time = resp_time;
+pars.max_highlights = max_highlights;
