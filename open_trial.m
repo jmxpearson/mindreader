@@ -4,9 +4,10 @@
 %basic bookkeeping, increment trial number
 trialnum = trialnum+1;
 
-setup_state
-
 % prepare to run trial
 keep_waiting = 1;
 trial_start_time = GetSecs;
-mark_event('trial_start',plx,1,ni);
+
+setup_state
+
+mark_event('trial_start', plx, 1, ni);

@@ -1,3 +1,7 @@
+%initialize data structure for recording
+global data state;
+data = [];
+
 %parse inputs
 parse_inits
 
@@ -24,7 +28,3 @@ setup_keys
 
 %set up data file
 setup_data_file
-
-%initialize data structure for recording
-global data;
-data=[];
