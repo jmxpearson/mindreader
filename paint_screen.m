@@ -8,8 +8,14 @@ target_rect = 10 * [-1 -1 1 1];
 
 % draw instructions
 voffset = 50;
-DrawFormattedText(window, ['This trial:\n' state.trial_text], 'center', ...
+if state.readywait
+    DrawFormattedText(window, ['This trial:\n' state.trial_text ...
+        '\n Press any key when ready'], 'center', ...
     voffset, [255 255 255]);
+else
+    DrawFormattedText(window, ['This trial:\n' state.trial_text], 'center', ...
+    voffset, [255 255 255]);
+end
 
 % draw numbers
 for ind = 1:state.num_options

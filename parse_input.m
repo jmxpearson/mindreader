@@ -15,12 +15,17 @@ if has_input
     %now parse input
     switch state.pushed
         case 1
-            state.selection = state.highlight;
+            if state.readywait  % if we've been waiting to begin
+                state.readywait = 0;
+            else  % if we're in task proper
+                state.selection = state.highlight;
+            end
         case -1
             if continue_running
                 disp('esc pressed while waiting for selection')
             end
             result='aborted';
+            state.readywait = 0;
             keep_waiting=0;
             continue_running=0;
     end

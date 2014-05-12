@@ -5,6 +5,9 @@
 % record start time
 state.trial_start_time = trial_start_time;
 
+% set to wait for input
+state.readywait = 1;
+
 % get trial type
 state.trialnum = trialnum;
 state.trial_type = trial_type(state.trialnum); 

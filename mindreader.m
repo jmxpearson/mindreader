@@ -13,6 +13,13 @@ while continue_running
     open_trial %set up trial variables
     
     while keep_waiting
+        while state.readywait
+            get_input %wait for user to click ready
+            
+            parse_input %map input to action
+            
+            esc_check
+        end
         
         cycle_options %sequentially offer options
         
